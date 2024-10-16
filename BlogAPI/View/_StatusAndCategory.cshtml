@@ -1,0 +1,63 @@
+﻿﻿<div class="container">
+    <form id="filterForm" asp-action="FilterTags" method="post">
+        <div class="row justify-content-center mb-4">
+            <div class="mb-2">Statuses & Categories</div>
+            <div class="col-lg-4 col-auto text-start">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button">
+                    <input name="tagFilters" value="Hot" type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                    <label class="btn btn-outline-danger" for="btncheck1">Hot</label>
+
+                    <input name="tagFilters" value="New" type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-danger" for="btncheck2">New</label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" disabled>
+                    <label class="btn btn-outline-danger disabled" for="btncheck2">..</label>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-auto text-end">
+                <div class="mb-3 text-start" hidden></div>
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button">
+                    <input name="tagFilters" value="Alien" type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="btncheck3">Alien</label>
+
+                    <input name="tagFilters" value="UFO" type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="btncheck4">UFO</label>
+
+                    <input name="tagFilters" value="Dog" type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="btncheck5">Dog</label>
+
+                    <input name="tagFilters" value="Cat" type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="btncheck6">Cat</label>
+
+                    <input name="tagFilters" value="Nasa" type="checkbox" class="btn-check" id="btncheck7" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="btncheck7">Nasa</label>
+
+                    <input name="tagFilters" value="Zombie" type="checkbox" class="btn-check" id="btncheck8" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="btncheck8">Zombie</label>
+                </div>
+                <button id="submitButton" class="btn btn-warning"><strong>Apply</strong></button>
+            </div>
+        </div>
+    </form>
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-auto text-start">
+            <a asp-controller="Home"
+               asp-action="CreateForum"
+               type="button"
+               class="btn btn-warning text-uppercase text-black">
+                <strong>Create</strong>
+            </a>
+        </div>
+        <div class="col-lg-6 col-auto text-start">
+            <form asp-controller="Home" asp-action="Search" method="post" class="d-flex" role="search">
+                <input name="searchText" class="form-control me-2 ms-5" type="search" placeholder="Search.." aria-label="Search">
+                <button class="btn btn-primary text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
